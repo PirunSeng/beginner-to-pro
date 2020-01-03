@@ -1,5 +1,7 @@
-<app-favorite></app-favorite>
-<br>
+<!--
 <input type="text" [(ngModel)]="title">
 <br>
 {{ title | titleCase }}
+-->
+
+<app-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
