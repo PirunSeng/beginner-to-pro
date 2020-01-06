@@ -4,4 +4,15 @@
 {{ title | titleCase }}
 -->
 
-<app-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
+<!-- <app-favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite> -->
+
+<!-- ngContent and ngContainer -->
+<!-- Note the differences by inspecting the elment -->
+<!-- <app-bootstrap-panel>
+  <div class="heading">Heading</div>
+  <ng-container class="heading">Heading</ng-container>
+</app-bootstrap-panel> -->
+
+<app-like (change)="onLikeChanged($event)"
+  [isLiked]="tweet.isLiked"
+  [likesCount]="tweet.likesCount"></app-like>
