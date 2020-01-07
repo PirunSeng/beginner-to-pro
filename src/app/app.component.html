@@ -13,6 +13,65 @@
   <ng-container class="heading">Heading</ng-container>
 </app-bootstrap-panel> -->
 
-<app-like (change)="onLikeChanged($event)"
+<!-- <app-like (change)="onLikeChanged($event)"
   [isLiked]="tweet.isLiked"
-  [likesCount]="tweet.likesCount"></app-like>
+  [likesCount]="tweet.likesCount"></app-like> -->
+
+<!-- *ngIf -->
+<!-- <div *ngIf="courses.length; then coursesList else noCourses"></div>
+<ng-template #coursesList>
+  <div hidden>Hidden</div> List of courses
+</ng-template>
+<ng-template #noCourses>
+  No courses yet
+</ng-template> -->
+
+<!-- *ngSwitchCase -->
+<!-- <ul class="nav nav-pills">
+  <li [class.active]="viewMode === 'map'">
+    <a (click)="viewMode = 'map'">Map View</a></li>
+  <li [class.active]="viewMode === 'list'">
+    <a (click)="viewMode = 'list'">List View</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>Default View Content</div>
+</div> -->
+
+<!-- *ngFor -->
+<!-- <button (click)="onAddCourse()">Add Course</button>
+<ul>
+  <li *ngFor="let course of courses; even as isEven">
+    <span [class.even]="isEven">{{ course.name }}</span>
+    <button (click)="onRemoveCourse(course)">Remove</button>
+    <button (click)="onUpdateCourse(course)">Update</button>
+  </li>
+</ul>
+<hr> -->
+<!-- trackBy, rerender only changed DOM -->
+<!-- <button (click)="onLoadOtherCourse()">Load Other Courses</button>
+<ul>
+  <li *ngFor="let course of otherCourses; trackBy: trackCourse">{{ course.name }}</li>
+</ul> -->
+
+<!-- ngStyle -->
+<!-- <button
+  [style.backgroundColor]="canSave ? 'blue' : 'gray'"
+  [ngStyle]="{
+    'color': canSave ? 'white' : 'black',
+    'fontWeight': canSave ? 'bold' : 'normal'
+  }"
+>Save</button> -->
+
+<!-- Safe Traversal Operator -->
+<!-- <span>{{ task.assignee?.name }}</span> -->
+
+<!-- Creating Custom Directives -->
+<!-- <input type="text" appInputFormat [format]="'uppercase'" /> -->
+<!-- <input type="text" [appInputFormat]="'uppercase'" /> -->
+
+<!-- Exercise Zippy -->
+<app-zippy title="Zipping Detail">
+  <div class="zippy-body">Zippy Body</div>
+</app-zippy>
