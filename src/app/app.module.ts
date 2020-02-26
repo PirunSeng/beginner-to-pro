@@ -20,6 +20,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostService } from './services/post.service';
 import { AppErrorHandler } from './common/app-error-handler';
 import { FollowersComponent } from './followers/followers.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ArchivesComponent } from './archives/archives.component';
+import { ArchiveDetailComponent } from './archive-detail/archive-detail.component';
 // import { FollowerService } from './services/follower.service';
 
 @NgModule({
@@ -37,7 +43,13 @@ import { FollowersComponent } from './followers/followers.component';
     NewCourseFormComponent,
     ChangePasswordComponent,
     PostsComponent,
-    FollowersComponent
+    FollowersComponent,
+    NavbarComponent,
+    HomeComponent,
+    ProfileComponent,
+    NotFoundComponent,
+    ArchivesComponent,
+    ArchiveDetailComponent
   ],
   imports: [
     BrowserModule,
