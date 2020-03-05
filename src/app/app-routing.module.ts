@@ -7,6 +7,9 @@ import { PostsComponent } from './posts/posts.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArchiveDetailComponent } from './archive-detail/archive-detail.component';
 import { ArchivesComponent } from './archives/archives.component';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -26,6 +29,12 @@ const routes: Routes = [
   },
   {
     path: 'archives', component: ArchivesComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: 'admin', component: AdminComponent, canActivate: [AuthGuard]
   },
   {
     path: '**', component: NotFoundComponent

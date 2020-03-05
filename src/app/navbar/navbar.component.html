@@ -11,6 +11,15 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/archives">Archives</a>
       </li>
+      <li *ngIf="!loggedIn" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li *ngIf="loggedIn" class="nav-item" routerLinkActive="active">
+        <a style="cursor: pointer;" class="nav-link" (click)="logout()">Logout</a>
+      </li>
+      <li *ngIf="loggedIn && isAdmin" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/admin">Admin</a>
+      </li>
     </ul>
   </div>
 </nav>

@@ -26,6 +26,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArchivesComponent } from './archives/archives.component';
 import { ArchiveDetailComponent } from './archive-detail/archive-detail.component';
+import { LoginComponent } from './login/login.component';
+import { fakeBackendProvider } from './helpers/fake-backend';
+import { AdminComponent } from './admin/admin.component';
+import { AuthGuard } from './services/auth-guard.service';
 // import { FollowerService } from './services/follower.service';
 
 @NgModule({
@@ -49,7 +53,9 @@ import { ArchiveDetailComponent } from './archive-detail/archive-detail.componen
     ProfileComponent,
     NotFoundComponent,
     ArchivesComponent,
-    ArchiveDetailComponent
+    ArchiveDetailComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +67,9 @@ import { ArchiveDetailComponent } from './archive-detail/archive-detail.componen
   providers: [
     PostService,
     // FollowerService,
-    { provide: ErrorHandler, useClass: AppErrorHandler }
+    { provide: ErrorHandler, useClass: AppErrorHandler },
+    fakeBackendProvider,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
